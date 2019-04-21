@@ -13,16 +13,24 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Page Content -->
 <body>
-
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-card">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-            <a href="education.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EDUCATION</a>
-            <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-            <a href="hobby.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOBBY</a>
-            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+          <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>HOME</a>
+          <a href="education.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">EDUCATION</a>
+          <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CONTACT</a>
+          <a href="hobby.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HOBBY</a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+        </div>
+      
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="education.html" class="w3-bar-item w3-button">EDUCATION</a>
+          <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+          <a href="hobby.html" class="w3-bar-item w3-button">HOBBY</a>
+          <a href="#" class="w3-bar-item w3-button">Search</a>
         </div>
     </div>
     <!-- End Navbar -->
@@ -37,23 +45,47 @@ body {font-family: "Lato", sans-serif}
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - Present</h6>
             <p>Colorado School of Mines</p>
             <hr>
-            </div>
-            <div class="w3-container">
+        </div>
+
+        <div class="w3-container">
             <h4 class="w3-opacity"><b>Bachelor of Science -- Computer Science</b></h4>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019, Honors: Magna Cum Laude</h6>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019 || Honors: Magna Cum Laude</h6>
             <p>Metropolitan State University of Denver</p>
             <hr>
-            </div>
-            <div class="w3-container">
+        </div>
+
+        <div class="w3-container">
             <h4 class="w3-opacity"><b>High School Diploma</b></h4>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August – December 2014, Honors: Outstanding Student</h6>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August – December 2014 || Honors: Outstanding GED Student</h6>
             <p>Emily Griffith High School</p><br>
-            </div>
+        </div>
     </div>
     <!-- End Education -->
 
-            
-  
-<!-- End Page Content -->
+<script>
+    // Script for side navigation
+    function w3_open() {
+        var x = document.getElementById("mySidebar");
+        x.style.width = "300px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+    }
+    
+    // Close side navigation
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+    
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
 </body>
 </html>
